@@ -1,0 +1,17 @@
+server:
+  port: 8390
+spring:
+  application:
+    name: hystrix-dashboard-turbine
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8090/eureka/
+turbine:
+  app-config: producer,customer,customer2
+  # clusterNameExpression指定集群名称，默认表达式appName；此时：turbine.aggregator.clusterConfig需要配置想要监控的应用名称
+  # 当clusterNameExpression: default时，turbine.aggregator.clusterConfig可以不写
+  # aggregator.cluster-config: 指定聚合哪些集群，多个使用”,”分割，默认为default。可使用http://…/turbine.stream?cluster={clusterConfig之一}访问
+  cluster-name-expression: new String("default")
+  combine-host-port: true

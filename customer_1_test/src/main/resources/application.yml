@@ -1,0 +1,15 @@
+server:
+  port: 8290
+spring:
+  application:
+    name: customer
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8090/eureka/
+
+feign:
+  # »€∂œ
+  hystrix:
+    enabled: true

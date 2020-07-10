@@ -1,0 +1,6 @@
+server:
+  port: 8590
+spring:
+  application:
+    name: config_client
+
