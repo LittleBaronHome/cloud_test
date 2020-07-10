@@ -1,0 +1,16 @@
+server:
+  port: 8690
+spring:
+  application:
+    name: zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8090/eureka
+
+#zuul:
+#  routes:
+#    baidu:
+#      path: /producer/**
+##      url: https://www.baidu.com/
+#      serviceId: producer
